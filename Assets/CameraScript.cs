@@ -6,6 +6,7 @@ public class CameraScript : MonoBehaviour {
 
     public Transform target;
 
+
     // Use this for initialization
     void Start () {
 		
@@ -13,9 +14,16 @@ public class CameraScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-				// Move it backwards 5m and up 1m
-        transform.position = target.position - target.forward * 5f + target.up * 1.5f;
-        transform.rotation = Quaternion.Euler(0f, target.rotation.eulerAngles.y, 0f);
-        
+		Vector3 newposition = target.position;
+        transform.position = Vector3.Lerp(transform.position, newposition, Time.deltaTime * 5f);
+
+        float x = Input.GetAxis("Mouse X");
+        float y = Input.GetAxis("Mouse Y");
+
+		Vector3 newrotation = transform.rotation.eulerAngles + Vector3.up * x + Vector3.left * y;
+
+        transform.rotation = Quaternion.Euler(newrotation);
+
     }
-}
+
+ }
