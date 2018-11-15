@@ -15,7 +15,7 @@ public class PlayerControllerScript : MonoBehaviour {
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
 
-        transform.position = transform.position + Vector3.forward * y + Vector3.left * x;
+        transform.position = transform.position + Vector3.forward * y * 0.2f + Vector3.left * -x * 0.2f;
 
 
 

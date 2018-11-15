@@ -629,7 +629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07102f28805dd4844b340900f85c69d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 0}
+  explosion: {fileID: 1600123202823890, guid: a0f3523f0863c6441b3ecc6d41723dd6, type: 2}
   ammo: 0
   maxammo: 0
   ammotext: {fileID: 70011980}
